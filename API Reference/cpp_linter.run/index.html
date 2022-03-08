@@ -1,0 +1,2398 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Developer documentation from sources.">
+      
+      
+      
+        <link rel="canonical" href="https://shenxianpeng.github.io/cpp-linter-action/API%20Reference/cpp_linter.run/">
+      
+      <link rel="icon" href="../../images/icon_large.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Run module - C/C++ Linter Action</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#run-module" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="C/C++ Linter Action" class="md-header__button md-logo" aria-label="C/C++ Linter Action" data-md-component="logo">
+      
+  <img src="../../images/icon_large.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            C/C++ Linter Action
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Run module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shenxianpeng/cpp-linter-action/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shenxianpeng/cpp-linter-action
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="C/C++ Linter Action" class="md-nav__button md-logo" aria-label="C/C++ Linter Action" data-md-component="logo">
+      
+  <img src="../../images/icon_large.png" alt="logo">
+
+    </a>
+    C/C++ Linter Action
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shenxianpeng/cpp-linter-action/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shenxianpeng/cpp-linter-action
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Dev Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dev Docs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dev Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_linter/" class="md-nav__link">
+        Base module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Run module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Run module
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run" class="md-nav__link">
+    cpp_linter.run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.capture_clang_tools_output" class="md-nav__link">
+    capture_clang_tools_output()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.end_log_group" class="md-nav__link">
+    end_log_group()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.filter_out_non_source_files" class="md-nav__link">
+    filter_out_non_source_files()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.get_list_of_changed_files" class="md-nav__link">
+    get_list_of_changed_files()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.is_file_in_list" class="md-nav__link">
+    is_file_in_list()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.list_source_files" class="md-nav__link">
+    list_source_files()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.main" class="md-nav__link">
+    main()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.make_annotations" class="md-nav__link">
+    make_annotations()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.parse_ignore_option" class="md-nav__link">
+    parse_ignore_option()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_diff_comments" class="md-nav__link">
+    post_diff_comments()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_pr_comment" class="md-nav__link">
+    post_pr_comment()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_push_comment" class="md-nav__link">
+    post_push_comment()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_results" class="md-nav__link">
+    post_results()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.run_clang_format" class="md-nav__link">
+    run_clang_format()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.run_clang_tidy" class="md-nav__link">
+    run_clang_tidy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.set_exit_code" class="md-nav__link">
+    set_exit_code()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.start_log_group" class="md-nav__link">
+    start_log_group()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.verify_files_are_present" class="md-nav__link">
+    verify_files_are_present()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_linter.clang_tidy/" class="md-nav__link">
+        clang_tidy module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_linter.clang_tidy_yml/" class="md-nav__link">
+        clang_tidy_yml module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_linter.clang_format_xml/" class="md-nav__link">
+        clang_format_xml module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_linter.thread_comments/" class="md-nav__link">
+        thread_comments module
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run" class="md-nav__link">
+    cpp_linter.run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.capture_clang_tools_output" class="md-nav__link">
+    capture_clang_tools_output()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.end_log_group" class="md-nav__link">
+    end_log_group()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.filter_out_non_source_files" class="md-nav__link">
+    filter_out_non_source_files()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.get_list_of_changed_files" class="md-nav__link">
+    get_list_of_changed_files()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.is_file_in_list" class="md-nav__link">
+    is_file_in_list()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.list_source_files" class="md-nav__link">
+    list_source_files()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.main" class="md-nav__link">
+    main()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.make_annotations" class="md-nav__link">
+    make_annotations()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.parse_ignore_option" class="md-nav__link">
+    parse_ignore_option()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_diff_comments" class="md-nav__link">
+    post_diff_comments()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_pr_comment" class="md-nav__link">
+    post_pr_comment()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_push_comment" class="md-nav__link">
+    post_push_comment()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.post_results" class="md-nav__link">
+    post_results()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.run_clang_format" class="md-nav__link">
+    run_clang_format()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.run_clang_tidy" class="md-nav__link">
+    run_clang_tidy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.set_exit_code" class="md-nav__link">
+    set_exit_code()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.start_log_group" class="md-nav__link">
+    start_log_group()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp_linter.run.verify_files_are_present" class="md-nav__link">
+    verify_files_are_present()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/shenxianpeng/cpp-linter-action/blob/master/docs/API Reference/cpp_linter.run.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="run-module">Run module<a class="headerlink" href="#run-module" title="Permanent link">&para;</a></h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="cpp_linter.run"></a>
+    <div class="doc doc-contents first">
+
+      <p>Run clang-tidy and clang-format on a list of changed files provided by GitHub's
+REST API. If executed from command-line, then <a class="autorefs autorefs-internal" href="#cpp_linter.run.main"><code>main()</code></a> is
+the entrypoint.</p>
+<div class="admonition info">
+<p class="admonition-title">See Also</p>
+<ul>
+<li><a href="https://docs.github.com/en/rest/reference/pulls">github rest API reference for pulls</a></li>
+<li><a href="https://docs.github.com/en/rest/reference/repos">github rest API reference for repos</a></li>
+<li><a href="https://docs.github.com/en/rest/reference/issues">github rest API reference for issues</a></li>
+</ul>
+</div>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.capture_clang_tools_output" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">capture_clang_tools_output</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">checks</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.capture_clang_tools_output" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Execute and capture all output from clang-tidy and clang-format. This aggregates
+results in the <a class="autorefs autorefs-internal" href="../cpp_linter/#cpp_linter.__init__.Globals.OUTPUT"><code>OUTPUT</code></a>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>version</code></td>
+        <td><code>str</code></td>
+        <td><p>The version of clang-tidy to run.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>checks</code></td>
+        <td><code>str</code></td>
+        <td><p>The <code>str</code> of comma-separated regulate expressions that describe
+the desired clang-tidy checks to be enabled/configured.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>style</code></td>
+        <td><code>str</code></td>
+        <td><p>The clang-format style rules to adhere. Set this to 'file' to
+use the relative-most .clang-format configuration file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>lines_changed_only</code></td>
+        <td><code>bool</code></td>
+        <td><p>A flag that forces focus on only changes in the event's
+diff info.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">capture_clang_tools_output</span><span class="p">(</span>
+    <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">checks</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Execute and capture all output from clang-tidy and clang-format. This aggregates</span>
+<span class="sd">    results in the [`OUTPUT`][cpp_linter.__init__.Globals.OUTPUT].</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        version: The version of clang-tidy to run.</span>
+<span class="sd">        checks: The `str` of comma-separated regulate expressions that describe</span>
+<span class="sd">            the desired clang-tidy checks to be enabled/configured.</span>
+<span class="sd">        style: The clang-format style rules to adhere. Set this to &#39;file&#39; to</span>
+<span class="sd">            use the relative-most .clang-format configuration file.</span>
+<span class="sd">        lines_changed_only: A flag that forces focus on only changes in the event&#39;s</span>
+<span class="sd">            diff info.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tidy_notes</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># temporary cache of parsed notifications for use in log commands</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">(</span>
+        <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span>
+        <span class="k">if</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;pull_request&quot;</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+        <span class="k">else</span> <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span>
+    <span class="p">):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]):</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="s2">&quot;raw_url&quot;</span><span class="p">])[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">start_log_group</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Performing checkup on </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">run_clang_tidy</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">checks</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">)</span>
+        <span class="n">run_clang_format</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">)</span>
+        <span class="n">end_log_group</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s2">&quot;clang_tidy_report.txt&quot;</span><span class="p">):</span>
+            <span class="n">parse_tidy_output</span><span class="p">()</span>  <span class="c1"># get clang-tidy fixes from stdout</span>
+            <span class="k">if</span> <span class="n">Globals</span><span class="o">.</span><span class="n">PAYLOAD_TIDY</span><span class="p">:</span>
+                <span class="n">Globals</span><span class="o">.</span><span class="n">PAYLOAD_TIDY</span> <span class="o">+=</span> <span class="s2">&quot;&lt;hr&gt;&lt;/details&gt;&quot;</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">PAYLOAD_TIDY</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&lt;details&gt;&lt;summary&gt;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&lt;/summary&gt;&lt;br&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">for</span> <span class="n">fix</span> <span class="ow">in</span> <span class="n">GlobalParser</span><span class="o">.</span><span class="n">tidy_notes</span><span class="p">:</span>
+                <span class="n">Globals</span><span class="o">.</span><span class="n">PAYLOAD_TIDY</span> <span class="o">+=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">fix</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">GlobalParser</span><span class="o">.</span><span class="n">tidy_notes</span><span class="p">:</span>
+                <span class="n">tidy_notes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+            <span class="n">GlobalParser</span><span class="o">.</span><span class="n">tidy_notes</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>  <span class="c1"># empty list to avoid duplicated output</span>
+
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s2">&quot;clang_format_output.xml&quot;</span><span class="p">):</span>
+            <span class="n">parse_format_replacements_xml</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">))</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="n">GlobalParser</span><span class="o">.</span><span class="n">format_advice</span>
+                <span class="ow">and</span> <span class="n">GlobalParser</span><span class="o">.</span><span class="n">format_advice</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replaced_lines</span>
+            <span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">:</span>
+                    <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">&quot;&lt;!-- cpp linter action --&gt;</span><span class="se">\n</span><span class="s2">## :scroll: &quot;</span>
+                    <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span> <span class="o">+=</span> <span class="s2">&quot;Run `clang-format` on the following files</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- [ ] </span><span class="si">{</span><span class="n">file</span><span class="p">[</span><span class="s1">&#39;filename&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">if</span> <span class="n">Globals</span><span class="o">.</span><span class="n">PAYLOAD_TIDY</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">:</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">&quot;&lt;!-- cpp linter action --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span> <span class="o">+=</span> <span class="s2">&quot;## :speech_balloon: Output from `clang-tidy`</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span> <span class="o">+=</span> <span class="n">Globals</span><span class="o">.</span><span class="n">PAYLOAD_TIDY</span>
+    <span class="n">GlobalParser</span><span class="o">.</span><span class="n">tidy_notes</span> <span class="o">=</span> <span class="n">tidy_notes</span><span class="p">[:]</span>  <span class="c1"># restore cache of notifications</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.end_log_group" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">end_log_group</span><span class="p">()</span></code>
+
+
+<a href="#cpp_linter.run.end_log_group" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>End a callapsable group of log statements.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">end_log_group</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;End a callapsable group of log statements.&quot;&quot;&quot;</span>
+    <span class="n">log_commander</span><span class="o">.</span><span class="n">fatal</span><span class="p">(</span><span class="s2">&quot;::endgroup::&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.filter_out_non_source_files" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">filter_out_non_source_files</span><span class="p">(</span><span class="n">ext_list</span><span class="p">,</span> <span class="n">ignored</span><span class="p">,</span> <span class="n">not_ignored</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.filter_out_non_source_files" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Exclude undesired files (specified by user input 'extensions'). This filter
+applies to the event's <a class="autorefs autorefs-internal" href="../cpp_linter/#cpp_linter.__init__.Globals.FILES"><code>FILES</code></a> attribute.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ext_list</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of file extensions that are to be examined.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>ignored</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of paths to explicitly ignore.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>not_ignored</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of paths to explicitly not ignore.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>lines_changed_only</code></td>
+        <td><code>bool</code></td>
+        <td><p>A flag that forces focus on only changes in the event's
+diff info.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>True if there are files to check. False will invoke a early exit (in
+<a class="autorefs autorefs-internal" href="#cpp_linter.run.main"><code>main()</code></a>) when no files to be checked.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">filter_out_non_source_files</span><span class="p">(</span>
+    <span class="n">ext_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">ignored</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">not_ignored</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Exclude undesired files (specified by user input &#39;extensions&#39;). This filter</span>
+<span class="sd">    applies to the event&#39;s [`FILES`][cpp_linter.__init__.Globals.FILES] attribute.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ext_list: A list of file extensions that are to be examined.</span>
+<span class="sd">        ignored: A list of paths to explicitly ignore.</span>
+<span class="sd">        not_ignored: A list of paths to explicitly not ignore.</span>
+<span class="sd">        lines_changed_only: A flag that forces focus on only changes in the event&#39;s</span>
+<span class="sd">            diff info.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if there are files to check. False will invoke a early exit (in</span>
+<span class="sd">        [`main()`][cpp_linter.run.main]) when no files to be checked.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">(</span>
+        <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span> <span class="k">if</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;pull_request&quot;</span> <span class="k">else</span> <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">])[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span> <span class="ow">in</span> <span class="n">ext_list</span>
+            <span class="ow">and</span> <span class="ow">not</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;removed&quot;</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">is_file_in_list</span><span class="p">(</span><span class="n">ignored</span><span class="p">,</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">],</span> <span class="s2">&quot;ignored&quot;</span><span class="p">)</span>
+                <span class="ow">or</span> <span class="n">is_file_in_list</span><span class="p">(</span><span class="n">not_ignored</span><span class="p">,</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">],</span> <span class="s2">&quot;not ignored&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">):</span>
+            <span class="k">if</span> <span class="n">lines_changed_only</span> <span class="ow">and</span> <span class="s2">&quot;patch&quot;</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="c1"># get diff details for the file&#39;s changes</span>
+                <span class="n">line_filter</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">),</span>
+                    <span class="s2">&quot;lines&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                <span class="p">}</span>
+                <span class="n">file</span><span class="p">[</span><span class="s2">&quot;diff_line_map&quot;</span><span class="p">],</span> <span class="n">line_numb_in_diff</span> <span class="o">=</span> <span class="p">({},</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="c1"># diff_line_map is a dict for which each</span>
+                <span class="c1">#     - key is the line number in the file</span>
+                <span class="c1">#     - value is the line&#39;s &quot;position&quot; in the diff</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="s2">&quot;patch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()):</span>
+                    <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;@@ -&quot;</span><span class="p">):</span>
+                        <span class="n">changed_hunk</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot; +&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot; @@&quot;</span><span class="p">)]</span>
+                        <span class="n">changed_hunk</span> <span class="o">=</span> <span class="n">changed_hunk</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+                        <span class="n">start_line</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">changed_hunk</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="n">hunk_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">changed_hunk</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                        <span class="n">line_filter</span><span class="p">[</span><span class="s2">&quot;lines&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                            <span class="p">[</span><span class="n">start_line</span><span class="p">,</span> <span class="n">hunk_length</span> <span class="o">+</span> <span class="n">start_line</span><span class="p">]</span>
+                        <span class="p">)</span>
+                        <span class="n">line_numb_in_diff</span> <span class="o">=</span> <span class="n">start_line</span>
+                    <span class="k">elif</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">):</span>
+                        <span class="n">file</span><span class="p">[</span><span class="s2">&quot;diff_line_map&quot;</span><span class="p">][</span><span class="n">line_numb_in_diff</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+                        <span class="n">line_filter</span><span class="p">[</span><span class="s2">&quot;lines&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">line_numb_in_diff</span>
+                        <span class="n">line_numb_in_diff</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">file</span><span class="p">[</span><span class="s2">&quot;line_filter&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">line_filter</span>
+            <span class="k">elif</span> <span class="n">lines_changed_only</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Giving attention to the following files:</span><span class="se">\n\t</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">f</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">]),</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;pull_request&quot;</span><span class="p">:</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span> <span class="o">=</span> <span class="n">files</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">files</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CI&quot;</span><span class="p">):</span>  <span class="c1"># if not executed on a github runner</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;.changed_files.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">temp</span><span class="p">:</span>
+                <span class="c1"># dump altered json of changed files</span>
+                <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No source files need checking!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.get_list_of_changed_files" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_list_of_changed_files</span><span class="p">()</span></code>
+
+
+<a href="#cpp_linter.run.get_list_of_changed_files" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Fetch the JSON payload of the event's changed files. Sets the
+<a class="autorefs autorefs-internal" href="../cpp_linter/#cpp_linter.__init__.Globals.FILES"><code>FILES</code></a> attribute.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_list_of_changed_files</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Fetch the JSON payload of the event&#39;s changed files. Sets the</span>
+<span class="sd">    [`FILES`][cpp_linter.__init__.Globals.FILES] attribute.&quot;&quot;&quot;</span>
+    <span class="n">start_log_group</span><span class="p">(</span><span class="s2">&quot;Get list of specified source files&quot;</span><span class="p">)</span>
+    <span class="n">files_link</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">GITHUB_API_URL</span><span class="si">}</span><span class="s2">/repos/</span><span class="si">{</span><span class="n">GITHUB_REPOSITORY</span><span class="si">}</span><span class="s2">/&quot;</span>
+    <span class="k">if</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;pull_request&quot;</span><span class="p">:</span>
+        <span class="n">files_link</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;pulls/</span><span class="si">{</span><span class="n">Globals</span><span class="o">.</span><span class="n">EVENT_PAYLOAD</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/files&quot;</span>
+    <span class="k">elif</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;push&quot;</span><span class="p">:</span>
+        <span class="n">files_link</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;commits/</span><span class="si">{</span><span class="n">GITHUB_SHA</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;triggered on unsupported event.&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">set_exit_code</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Fetching files list from url: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">files_link</span><span class="p">)</span>
+    <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">files_link</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.is_file_in_list" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_file_in_list</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">prompt</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.is_file_in_list" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Detirmine if a file is specified in a list of paths and/or filenames.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>paths</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of specified paths to compare with. This list can contain a
+specified file, but the file's path must be included as part of the
+filename.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>file_name</code></td>
+        <td><code>str</code></td>
+        <td><p>The file's path &amp; name being sought in the <code>paths</code> list.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>prompt</code></td>
+        <td><code>str</code></td>
+        <td><p>A debugging prompt to use when the path is found in the list.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><ul>
+<li>True if <code>file_name</code> is in the <code>paths</code> list.</li>
+<li>False if <code>file_name</code> is not in the <code>paths</code> list.</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_file_in_list</span><span class="p">(</span><span class="n">paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Detirmine if a file is specified in a list of paths and/or filenames.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        paths: A list of specified paths to compare with. This list can contain a</span>
+<span class="sd">            specified file, but the file&#39;s path must be included as part of the</span>
+<span class="sd">            filename.</span>
+<span class="sd">        file_name: The file&#39;s path &amp; name being sought in the `paths` list.</span>
+<span class="sd">        prompt: A debugging prompt to use when the path is found in the list.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        - True if `file_name` is in the `paths` list.</span>
+<span class="sd">        - False if `file_name` is not in the `paths` list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">commonpath</span><span class="p">([</span><span class="n">path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="n">path</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                <span class="s1">&#39;&quot;.</span><span class="si">%s%s</span><span class="s1">&quot; is </span><span class="si">%s</span><span class="s1"> as specified in the domain &quot;.</span><span class="si">%s%s</span><span class="s1">&quot;&#39;</span><span class="p">,</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">,</span>
+                <span class="n">file_name</span><span class="p">,</span>
+                <span class="n">prompt</span><span class="p">,</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">,</span>
+                <span class="n">path</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.list_source_files" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">list_source_files</span><span class="p">(</span><span class="n">ext_list</span><span class="p">,</span> <span class="n">ignored_paths</span><span class="p">,</span> <span class="n">not_ignored</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.list_source_files" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Make a list of source files to be checked. The resulting list is stored in
+<a class="autorefs autorefs-internal" href="../cpp_linter/#cpp_linter.__init__.Globals.FILES"><code>FILES</code></a>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>ext_list</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of file extensions that should by attended.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>ignored_paths</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of paths to explicitly ignore.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>not_ignored</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of paths to explicitly not ignore.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>True if there are files to check. False will invoke a early exit (in
+<a class="autorefs autorefs-internal" href="#cpp_linter.run.main"><code>main()</code></a>) when no files to be checked.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">list_source_files</span><span class="p">(</span><span class="n">ext_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">ignored_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">not_ignored</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Make a list of source files to be checked. The resulting list is stored in</span>
+<span class="sd">    [`FILES`][cpp_linter.__init__.Globals.FILES].</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ext_list: A list of file extensions that should by attended.</span>
+<span class="sd">        ignored_paths: A list of paths to explicitly ignore.</span>
+<span class="sd">        not_ignored: A list of paths to explicitly not ignore.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if there are files to check. False will invoke a early exit (in</span>
+<span class="sd">        [`main()`][cpp_linter.run.main]) when no files to be checked.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">start_log_group</span><span class="p">(</span><span class="s2">&quot;Get list of specified source files&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;.gitmodules&quot;</span><span class="p">):</span>
+        <span class="n">submodules</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
+        <span class="n">submodules</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;.gitmodules&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">module</span> <span class="ow">in</span> <span class="n">submodules</span><span class="o">.</span><span class="n">sections</span><span class="p">():</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Apending submodule to ignored paths: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">submodules</span><span class="p">[</span><span class="n">module</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">ignored_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">submodules</span><span class="p">[</span><span class="n">module</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">])</span>
+
+    <span class="n">root_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">root_path</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">dirpath</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">root_path</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+        <span class="n">path_parts</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+        <span class="n">is_hidden</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">path_parts</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">part</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+                <span class="c1"># logger.debug(&quot;Skipping \&quot;.%s%s\&quot;&quot;, os.sep, path)</span>
+                <span class="n">is_hidden</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">is_hidden</span><span class="p">:</span>
+            <span class="k">continue</span>  <span class="c1"># skip sources in hidden directories</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Crawling &quot;.</span><span class="si">%s%s</span><span class="s1">&quot;&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file</span><span class="p">)[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span> <span class="ow">in</span> <span class="n">ext_list</span><span class="p">:</span>
+                <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;&quot;.</span><span class="si">%s%s</span><span class="s1">&quot; is a source code file&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">,</span> <span class="n">file_path</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">is_file_in_list</span><span class="p">(</span>
+                    <span class="n">ignored_paths</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;ignored&quot;</span>
+                <span class="p">)</span> <span class="ow">or</span> <span class="n">is_file_in_list</span><span class="p">(</span><span class="n">not_ignored</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;not ignored&quot;</span><span class="p">):</span>
+                    <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="n">file_path</span><span class="p">})</span>
+
+    <span class="k">if</span> <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Giving attention to the following files:</span><span class="se">\n\t</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">f</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">]),</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No source files found.&quot;</span><span class="p">)</span>  <span class="c1"># this might need to be warning</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.main" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">main</span><span class="p">()</span></code>
+
+
+<a href="#cpp_linter.run.main" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>The main script.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;The main script.&quot;&quot;&quot;</span>
+
+    <span class="c1"># The parsed CLI args</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">cli_arg_parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="c1"># set logging verbosity</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">verbosity</span><span class="p">))</span>
+
+    <span class="c1"># prepare ignored paths list</span>
+    <span class="n">ignored</span><span class="p">,</span> <span class="n">not_ignored</span> <span class="o">=</span> <span class="n">parse_ignore_option</span><span class="p">(</span><span class="s2">&quot;&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">ignore</span> <span class="k">else</span> <span class="n">args</span><span class="o">.</span><span class="n">ignore</span><span class="p">)</span>
+
+    <span class="c1"># prepare extensions list</span>
+    <span class="n">args</span><span class="o">.</span><span class="n">extensions</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">extensions</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;processing </span><span class="si">%s</span><span class="s2"> event&quot;</span><span class="p">,</span> <span class="n">GITHUB_EVENT_NAME</span><span class="p">)</span>
+
+    <span class="c1"># change working directory</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">repo_root</span><span class="p">)</span>
+
+    <span class="n">exit_early</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">files_changed_only</span><span class="p">:</span>
+        <span class="c1"># load event&#39;s json info about the workflow run</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">GITHUB_EVEN_PATH</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">payload</span><span class="p">:</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">EVENT_PAYLOAD</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+            <span class="n">start_log_group</span><span class="p">(</span><span class="s2">&quot;Event json from the runner&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">Globals</span><span class="o">.</span><span class="n">EVENT_PAYLOAD</span><span class="p">))</span>
+            <span class="n">end_log_group</span><span class="p">()</span>
+        <span class="n">get_list_of_changed_files</span><span class="p">()</span>
+        <span class="n">exit_early</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">filter_out_non_source_files</span><span class="p">(</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">extensions</span><span class="p">,</span>
+            <span class="n">ignored</span><span class="p">,</span>
+            <span class="n">not_ignored</span><span class="p">,</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">lines_changed_only</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">files_changed_only</span> <span class="k">else</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">exit_early</span><span class="p">:</span>
+            <span class="n">verify_files_are_present</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">exit_early</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">list_source_files</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">extensions</span><span class="p">,</span> <span class="n">ignored</span><span class="p">,</span> <span class="n">not_ignored</span><span class="p">)</span>
+    <span class="n">end_log_group</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">exit_early</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">set_exit_code</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+    <span class="n">capture_clang_tools_output</span><span class="p">(</span>
+        <span class="n">args</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">tidy_checks</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">style</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">lines_changed_only</span>
+    <span class="p">)</span>
+
+    <span class="n">start_log_group</span><span class="p">(</span><span class="s2">&quot;Posting comment(s)&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">thread_comments</span><span class="p">:</span>
+        <span class="n">post_results</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># False is hard-coded to disable diff comments.</span>
+    <span class="n">set_exit_code</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">make_annotations</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">style</span><span class="p">)))</span>
+    <span class="n">end_log_group</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.make_annotations" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_annotations</span><span class="p">(</span><span class="n">style</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.make_annotations" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Use github log commands to make annotations from clang-format and
+clang-tidy output.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>style</code></td>
+        <td><code>str</code></td>
+        <td><p>The chosen code style guidelines. The value 'file' is replaced with
+'custom style'.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">make_annotations</span><span class="p">(</span><span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Use github log commands to make annotations from clang-format and</span>
+<span class="sd">    clang-tidy output.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        style: The chosen code style guidelines. The value &#39;file&#39; is replaced with</span>
+<span class="sd">            &#39;custom style&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># log_commander obj&#39;s verbosity is hard-coded to show debug statements</span>
+    <span class="n">ret_val</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">GlobalParser</span><span class="o">.</span><span class="n">format_advice</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">note</span><span class="o">.</span><span class="n">replaced_lines</span><span class="p">:</span>
+            <span class="n">ret_val</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">log_commander</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">note</span><span class="o">.</span><span class="n">log_command</span><span class="p">(</span><span class="n">style</span><span class="p">))</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">GlobalParser</span><span class="o">.</span><span class="n">tidy_notes</span><span class="p">:</span>
+        <span class="n">ret_val</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">log_commander</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">note</span><span class="o">.</span><span class="n">log_command</span><span class="p">())</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Created </span><span class="si">%d</span><span class="s2"> annotations&quot;</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ret_val</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.parse_ignore_option" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">parse_ignore_option</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.parse_ignore_option" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Parse a givven string of paths (separated by a '|') into <code>ignored</code> and
+<code>not_ignored</code> lists of strings.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>paths</code></td>
+        <td><code>str</code></td>
+        <td><p>This argument conforms to the CLI arg <code>--ignore</code> (or <code>-i</code>).</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td><p>A tuple of lists in which each list is a set of strings.
+- index 0 is the <code>ignored</code> list
+- index 1 is the <code>not_ignored</code> list</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_ignore_option</span><span class="p">(</span><span class="n">paths</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse a givven string of paths (separated by a &#39;|&#39;) into `ignored` and</span>
+<span class="sd">    `not_ignored` lists of strings.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        paths: This argument conforms to the CLI arg `--ignore` (or `-i`).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A tuple of lists in which each list is a set of strings.</span>
+<span class="sd">        - index 0 is the `ignored` list</span>
+<span class="sd">        - index 1 is the `not_ignored` list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ignored</span><span class="p">,</span> <span class="n">not_ignored</span> <span class="o">=</span> <span class="p">([],</span> <span class="p">[])</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="n">paths</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="n">is_included</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;!./&quot;</span> <span class="k">if</span> <span class="n">is_included</span> <span class="k">else</span> <span class="s2">&quot;./&quot;</span><span class="p">):</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># relative dir is assumed</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># strip leading/trailing spaces</span>
+        <span class="k">if</span> <span class="n">is_included</span><span class="p">:</span>
+            <span class="n">not_ignored</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ignored</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ignored</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Ignoring the following paths/files:</span><span class="se">\n\t</span><span class="s2">./</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">./&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">ignored</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">not_ignored</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Not ignoring the following paths/files:</span><span class="se">\n\t</span><span class="s2">./</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">./&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">not_ignored</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">ignored</span><span class="p">,</span> <span class="n">not_ignored</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.post_diff_comments" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_diff_comments</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.post_diff_comments" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Post comments inside a unified diff (only PRs are supported).</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>base_url</code></td>
+        <td><code>str</code></td>
+        <td><p>The root of the url used to interact with the REST API via <code>requests</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>user_id</code></td>
+        <td><code>int</code></td>
+        <td><p>The user's account ID number.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>A bool describing if the linter checks passed. This is used as the action's
+output value (a soft exit code).</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">post_diff_comments</span><span class="p">(</span><span class="n">base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Post comments inside a unified diff (only PRs are supported).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        base_url: The root of the url used to interact with the REST API via `requests`.</span>
+<span class="sd">        user_id: The user&#39;s account ID number.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bool describing if the linter checks passed. This is used as the action&#39;s</span>
+<span class="sd">        output value (a soft exit code).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">comments_url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;pulls/comments/&quot;</span>  <span class="c1"># for use with comment_id</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">list_diff_comments</span><span class="p">()</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Posting </span><span class="si">%d</span><span class="s2"> comments&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">payload</span><span class="p">))</span>
+
+    <span class="c1"># uncomment the next 3 lines for debug output without posting a comment</span>
+    <span class="c1"># for i, comment in enumerate(payload):</span>
+    <span class="c1">#     logger.debug(&quot;comments %d: %s&quot;, i, json.dumps(comment, indent=2))</span>
+    <span class="c1"># return</span>
+
+    <span class="c1"># get existing review comments</span>
+    <span class="n">reviews_url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;pulls/</span><span class="si">{</span><span class="n">Globals</span><span class="o">.</span><span class="n">EVENT_PAYLOAD</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">/&#39;</span>
+    <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reviews_url</span> <span class="o">+</span> <span class="s2">&quot;comments&quot;</span><span class="p">)</span>
+    <span class="n">existing_comments</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="c1"># filter out comments not made by our bot</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">comment</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">existing_comments</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">comment</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;&lt;!-- cpp linter action --&gt;&quot;</span><span class="p">):</span>
+            <span class="k">del</span> <span class="n">existing_comments</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+    <span class="c1"># conditionally post comments in the diff</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">body</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">payload</span><span class="p">):</span>
+        <span class="c1"># check if comment is already there</span>
+        <span class="n">already_posted</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">comment_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">comment</span> <span class="ow">in</span> <span class="n">existing_comments</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="nb">int</span><span class="p">(</span><span class="n">comment</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">user_id</span>
+                <span class="ow">and</span> <span class="n">comment</span><span class="p">[</span><span class="s2">&quot;line&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;line&quot;</span><span class="p">]</span>
+                <span class="ow">and</span> <span class="n">comment</span><span class="p">[</span><span class="s2">&quot;path&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">payload</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;path&quot;</span><span class="p">]</span>
+            <span class="p">):</span>
+                <span class="n">already_posted</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">if</span> <span class="n">comment</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]:</span>
+                    <span class="n">comment_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">comment</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>  <span class="c1"># use this to update comment</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">break</span>
+        <span class="k">if</span> <span class="n">already_posted</span> <span class="ow">and</span> <span class="n">comment_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;comment </span><span class="si">%d</span><span class="s2"> already posted&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+            <span class="k">continue</span>  <span class="c1"># don&#39;t bother reposting the same comment</span>
+
+        <span class="c1"># update ot create a review comment (in the diff)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Payload </span><span class="si">%d</span><span class="s2"> body = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">body</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">comment_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
+                <span class="n">comments_url</span> <span class="o">+</span> <span class="n">comment_id</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">API_HEADERS</span><span class="p">,</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="n">body</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]}),</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Got </span><span class="si">%d</span><span class="s2"> from PATCHing comment </span><span class="si">%d</span><span class="s2"> (</span><span class="si">%d</span><span class="s2">)&quot;</span><span class="p">,</span>
+                <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span>
+                <span class="n">i</span><span class="p">,</span>
+                <span class="n">comment_id</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">log_response_msg</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+                <span class="n">reviews_url</span> <span class="o">+</span> <span class="s2">&quot;comments&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">API_HEADERS</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Got </span><span class="si">%d</span><span class="s2"> from POSTing review comment </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span>
+                <span class="n">i</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">log_response_msg</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.post_pr_comment" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_pr_comment</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.post_pr_comment" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>POST action's results for a push event.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>base_url</code></td>
+        <td><code>str</code></td>
+        <td><p>The root of the url used to interact with the REST API via <code>requests</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>user_id</code></td>
+        <td><code>int</code></td>
+        <td><p>The user's account ID number.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>A bool describing if the linter checks passed. This is used as the action's
+output value (a soft exit code).</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">post_pr_comment</span><span class="p">(</span><span class="n">base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;POST action&#39;s results for a push event.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        base_url: The root of the url used to interact with the REST API via `requests`.</span>
+<span class="sd">        user_id: The user&#39;s account ID number.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bool describing if the linter checks passed. This is used as the action&#39;s</span>
+<span class="sd">        output value (a soft exit code).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">comments_url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;issues/</span><span class="si">{</span><span class="n">Globals</span><span class="o">.</span><span class="n">EVENT_PAYLOAD</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">/comments&#39;</span>
+    <span class="n">remove_bot_comments</span><span class="p">(</span><span class="n">comments_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">:</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">})</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+            <span class="s2">&quot;payload body:</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">},</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">comments_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">API_HEADERS</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span>
+        <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Got </span><span class="si">%d</span><span class="s2"> from POSTing comment&quot;</span><span class="p">,</span> <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+        <span class="n">log_response_msg</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.post_push_comment" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_push_comment</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.post_push_comment" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>POST action's results for a push event.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>base_url</code></td>
+        <td><code>str</code></td>
+        <td><p>The root of the url used to interact with the REST API via <code>requests</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>user_id</code></td>
+        <td><code>int</code></td>
+        <td><p>The user's account ID number.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>bool</code></td>
+      <td><p>A bool describing if the linter checks passed. This is used as the action's
+output value (a soft exit code).</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">post_push_comment</span><span class="p">(</span><span class="n">base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;POST action&#39;s results for a push event.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        base_url: The root of the url used to interact with the REST API via `requests`.</span>
+<span class="sd">        user_id: The user&#39;s account ID number.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A bool describing if the linter checks passed. This is used as the action&#39;s</span>
+<span class="sd">        output value (a soft exit code).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">comments_url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;commits/</span><span class="si">{</span><span class="n">GITHUB_SHA</span><span class="si">}</span><span class="s2">/comments&quot;</span>
+    <span class="n">remove_bot_comments</span><span class="p">(</span><span class="n">comments_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">:</span>  <span class="c1"># diff comments are not supported for push events (yet)</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">})</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;payload body:</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">}))</span>
+        <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">comments_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">API_HEADERS</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span>
+        <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Got </span><span class="si">%d</span><span class="s2"> response from POSTing comment&quot;</span><span class="p">,</span> <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span><span class="o">.</span><span class="n">status_code</span>
+        <span class="p">)</span>
+        <span class="n">log_response_msg</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.post_results" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_results</span><span class="p">(</span><span class="n">use_diff_comments</span><span class="p">,</span> <span class="n">user_id</span><span class="o">=</span><span class="mi">41898282</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.post_results" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Post action's results using REST API.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>use_diff_comments</code></td>
+        <td><code>bool</code></td>
+        <td><p>This flag enables making/updating comments in the PR's diff
+info.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>user_id</code></td>
+        <td><code>int</code></td>
+        <td><p>The user's account ID number. Defaults to the generic bot's ID.</p></td>
+        <td><code>41898282</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">post_results</span><span class="p">(</span><span class="n">use_diff_comments</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">41898282</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Post action&#39;s results using REST API.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        use_diff_comments: This flag enables making/updating comments in the PR&#39;s diff</span>
+<span class="sd">            info.</span>
+<span class="sd">        user_id: The user&#39;s account ID number. Defaults to the generic bot&#39;s ID.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">GITHUB_TOKEN</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;The GITHUB_TOKEN is required!&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">set_exit_code</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">base_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">GITHUB_API_URL</span><span class="si">}</span><span class="s2">/repos/</span><span class="si">{</span><span class="n">GITHUB_REPOSITORY</span><span class="si">}</span><span class="s2">/&quot;</span>
+    <span class="n">checks_passed</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;pull_request&quot;</span><span class="p">:</span>
+        <span class="n">checks_passed</span> <span class="o">=</span> <span class="n">post_pr_comment</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">use_diff_comments</span><span class="p">:</span>
+            <span class="n">checks_passed</span> <span class="o">=</span> <span class="n">post_diff_comments</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;push&quot;</span><span class="p">:</span>
+        <span class="n">checks_passed</span> <span class="o">=</span> <span class="n">post_push_comment</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+    <span class="n">set_exit_code</span><span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="n">checks_passed</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.run_clang_format" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run_clang_format</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">file_obj</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">style</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.run_clang_format" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Run clang-format on a certain file</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>filename</code></td>
+        <td><code>str</code></td>
+        <td><p>The name of the local file to run clang-format on.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>file_obj</code></td>
+        <td><code>dict</code></td>
+        <td><p>JSON info about the file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>version</code></td>
+        <td><code>str</code></td>
+        <td><p>The version of clang-format to run.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>style</code></td>
+        <td><code>str</code></td>
+        <td><p>The clang-format style rules to adhere. Set this to 'file' to
+use the relative-most .clang-format configuration file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>lines_changed_only</code></td>
+        <td><code>bool</code></td>
+        <td><p>A flag that forces focus on only changes in the event's
+diff info.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">run_clang_format</span><span class="p">(</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_obj</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Run clang-format on a certain file</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        filename: The name of the local file to run clang-format on.</span>
+<span class="sd">        file_obj: JSON info about the file.</span>
+<span class="sd">        version: The version of clang-format to run.</span>
+<span class="sd">        style: The clang-format style rules to adhere. Set this to &#39;file&#39; to</span>
+<span class="sd">            use the relative-most .clang-format configuration file.</span>
+<span class="sd">        lines_changed_only: A flag that forces focus on only changes in the event&#39;s</span>
+<span class="sd">            diff info.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cmds</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;clang-format&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;&quot;</span> <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;win32&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;-</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+        <span class="sa">f</span><span class="s2">&quot;-style=</span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--output-replacements-xml&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">if</span> <span class="n">lines_changed_only</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line_range</span> <span class="ow">in</span> <span class="n">file_obj</span><span class="p">[</span><span class="s2">&quot;line_filter&quot;</span><span class="p">][</span><span class="s2">&quot;lines&quot;</span><span class="p">]:</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--lines=</span><span class="si">{</span><span class="n">line_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">line_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">))</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Running &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cmds</span><span class="p">))</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmds</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;clang_format_output.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
+        <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">returncode</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> raised the following error(s):</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cmds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">results</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+        <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.run_clang_tidy" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run_clang_tidy</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">file_obj</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">checks</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.run_clang_tidy" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Run clang-tidy on a certain file.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>filename</code></td>
+        <td><code>str</code></td>
+        <td><p>The name of the local file to run clang-tidy on.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>file_obj</code></td>
+        <td><code>dict</code></td>
+        <td><p>JSON info about the file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>version</code></td>
+        <td><code>str</code></td>
+        <td><p>The version of clang-tidy to run.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>checks</code></td>
+        <td><code>str</code></td>
+        <td><p>The <code>str</code> of comma-separated regulate expressions that describe
+the desired clang-tidy checks to be enabled/configured.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>lines_changed_only</code></td>
+        <td><code>bool</code></td>
+        <td><p>A flag that forces focus on only changes in the event's
+diff info.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">run_clang_tidy</span><span class="p">(</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_obj</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">checks</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lines_changed_only</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Run clang-tidy on a certain file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        filename: The name of the local file to run clang-tidy on.</span>
+<span class="sd">        file_obj: JSON info about the file.</span>
+<span class="sd">        version: The version of clang-tidy to run.</span>
+<span class="sd">        checks: The `str` of comma-separated regulate expressions that describe</span>
+<span class="sd">            the desired clang-tidy checks to be enabled/configured.</span>
+<span class="sd">        lines_changed_only: A flag that forces focus on only changes in the event&#39;s</span>
+<span class="sd">            diff info.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">checks</span> <span class="o">==</span> <span class="s2">&quot;-*&quot;</span><span class="p">:</span>  <span class="c1"># if all checks are disabled, then clang-tidy is skipped</span>
+        <span class="c1"># clear the clang-tidy output file and exit function</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;clang_tidy_report.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
+            <span class="k">return</span>
+    <span class="n">cmds</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;clang-tidy-</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;win32&quot;</span><span class="p">):</span>
+        <span class="n">cmds</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;clang-tidy&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">checks</span><span class="p">:</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-checks=</span><span class="si">{</span><span class="n">checks</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;--export-fixes=clang_tidy_output.yml&quot;</span><span class="p">)</span>
+    <span class="c1"># cmds.append(f&quot;--format-style={style}&quot;)</span>
+    <span class="k">if</span> <span class="n">lines_changed_only</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;line_filter = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">file_obj</span><span class="p">[</span><span class="s2">&quot;line_filter&quot;</span><span class="p">][</span><span class="s2">&quot;lines&quot;</span><span class="p">]))</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--line-filter=</span><span class="si">{</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">file_obj</span><span class="p">[</span><span class="s1">&#39;line_filter&#39;</span><span class="p">]])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">))</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;clang_tidy_output.yml&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">):</span>
+        <span class="k">pass</span>  <span class="c1"># clear yml file&#39;s content before running clang-tidy</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Running &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cmds</span><span class="p">))</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmds</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;clang_tidy_report.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
+        <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Output from clang-tidy:</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">results</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s2">&quot;clang_tidy_output.yml&quot;</span><span class="p">):</span>
+        <span class="n">parse_tidy_suggestions_yml</span><span class="p">()</span>  <span class="c1"># get clang-tidy fixes from yml</span>
+    <span class="k">if</span> <span class="n">results</span><span class="o">.</span><span class="n">returncode</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> raised the following error(s):</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cmds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">results</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+        <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.set_exit_code" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_exit_code</span><span class="p">(</span><span class="n">override</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.set_exit_code" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Set the action's exit code.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>override</code></td>
+        <td><code>int</code></td>
+        <td><p>The number to use when overriding the action's logic.</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>int</code></td>
+      <td><p>The exit code that was used. If the <code>override</code> parameter was not passed,
+then this value will describe (like a bool value) if any checks failed.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_exit_code</span><span class="p">(</span><span class="n">override</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Set the action&#39;s exit code.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        override: The number to use when overriding the action&#39;s logic.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The exit code that was used. If the `override` parameter was not passed,</span>
+<span class="sd">        then this value will describe (like a bool value) if any checks failed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">exit_code</span> <span class="o">=</span> <span class="n">override</span> <span class="k">if</span> <span class="n">override</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">bool</span><span class="p">(</span><span class="n">Globals</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;::set-output name=checks-failed::</span><span class="si">{</span><span class="n">exit_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">exit_code</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.start_log_group" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">start_log_group</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+
+
+<a href="#cpp_linter.run.start_log_group" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Begin a callapsable group of log statements.</p>
+<div class="admonition argrs">
+<p class="admonition-title">Argrs</p>
+<p>name: The name of the callapsable group</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">start_log_group</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Begin a callapsable group of log statements.</span>
+
+<span class="sd">    Argrs:</span>
+<span class="sd">        name: The name of the callapsable group</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">log_commander</span><span class="o">.</span><span class="n">fatal</span><span class="p">(</span><span class="s2">&quot;::group::</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="cpp_linter.run.verify_files_are_present" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">verify_files_are_present</span><span class="p">()</span></code>
+
+
+<a href="#cpp_linter.run.verify_files_are_present" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Download the files if not present.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This function assumes the working directory is the root of the invoking
+repository. If files are not found, then they are downloaded to the working
+directory. This is bad for files with the same name from different folders.</p>
+</div>
+
+        <details class="quote">
+          <summary>Source code in <code>cpp_linter/run.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">verify_files_are_present</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Download the files if not present.</span>
+
+<span class="sd">    !!! hint</span>
+<span class="sd">        This function assumes the working directory is the root of the invoking</span>
+<span class="sd">        repository. If files are not found, then they are downloaded to the working</span>
+<span class="sd">        directory. This is bad for files with the same name from different folders.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">(</span>
+        <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span> <span class="k">if</span> <span class="n">GITHUB_EVENT_NAME</span> <span class="o">==</span> <span class="s2">&quot;pull_request&quot;</span> <span class="k">else</span> <span class="n">Globals</span><span class="o">.</span><span class="n">FILES</span><span class="p">[</span><span class="s2">&quot;files&quot;</span><span class="p">]</span>
+    <span class="p">):</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Could not find </span><span class="si">%s</span><span class="s2">! Did you checkout the repo?&quot;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Downloading file from url: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">[</span><span class="s2">&quot;raw_url&quot;</span><span class="p">])</span>
+            <span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="s2">&quot;raw_url&quot;</span><span class="p">])</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">file_name</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">temp</span><span class="p">:</span>
+                <span class="n">temp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Globals</span><span class="o">.</span><span class="n">response_buffer</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../cpp_linter/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Base module" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Base module
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../cpp_linter.clang_tidy/" class="md-footer__link md-footer__link--next" aria-label="Next: clang_tidy module" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              clang_tidy module
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>
